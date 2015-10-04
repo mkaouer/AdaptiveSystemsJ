@@ -1,0 +1,8 @@
+IF (Education Level=High) and ( Sequence<=0.95 ) THEN ( Interface chargé )
+  IF (Interest=Meduim) and ( Unity<=0.08 ) THEN ( Guidage faible )
+  IF (Interest=Meduim) and ( Regularity<=0.5 ) THEN ( Interface non centré )
+  IF (Interest=Low) and ( Simplicity>=0.32 ) THEN ( Problem72 )
+  IF (Education Level=Low) and ( Sequence<=0.69 ) THEN ( Guidage fort )
+  IF (User Experience=Low) and ( Unity<=0.9 ) THEN ( Guidage fort )
+  IF (Motivation=Low) and ( Grouping>=0.44 ) THEN ( Interface chargé )
+  
