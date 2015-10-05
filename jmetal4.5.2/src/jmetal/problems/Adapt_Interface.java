@@ -18,7 +18,7 @@ public class Adapt_Interface extends Problem {
 
 	public Adapt_Interface(String solutionType, Integer numberOfVariables) {
 		
-		  numberOfVariables_   =  50 ;         //S.SolutionSize(min_rules_size, max_rules_size) ;    //
+		  numberOfVariables_   =  100 ;         //S.SolutionSize(min_rules_size, max_rules_size) ;    //
 		    numberOfObjectives_  = 2                            ;
 		    numberOfConstraints_ = 0                            ;
 		    problemName_         = "Adapt_Interface"                    ;
