@@ -16,6 +16,7 @@ import jxl.read.biff.BiffException;
 
 public class MySolution {
 	//public static ArrayList<Rule> rules = new ArrayList<Rule> ();
+	// test comit
 	public static ArrayList<Integer> ind1 = new ArrayList<Integer>();
 	public static ArrayList<Integer> ind2 = new ArrayList<Integer>();
 	public static ArrayList<Integer> ind3 = new ArrayList<Integer>();
