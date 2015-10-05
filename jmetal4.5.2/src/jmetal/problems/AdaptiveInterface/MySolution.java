@@ -2,12 +2,16 @@ package jmetal.problems.AdaptiveInterface;
 
 import java.io.File;
 
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
 import jmetal.encodings.solutionType.IntSolutionType;
+import jxl.Sheet;
+import jxl.Workbook;
+import jxl.read.biff.BiffException;
 
 public class MySolution {
 	//public static ArrayList<Rule> rules = new ArrayList<Rule> ();
