@@ -8,6 +8,6 @@
 	<classpathentry kind="lib" path="lib/jdom-2.0.2-junit.jar"/>
 	<classpathentry kind="lib" path="lib/jdom-2.0.2-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jdom-2.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ines/Desktop/jxl-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/MICRO-PC/Downloads/jexcelapi/jxl.jar" sourcepath="/Parsing_Interface"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

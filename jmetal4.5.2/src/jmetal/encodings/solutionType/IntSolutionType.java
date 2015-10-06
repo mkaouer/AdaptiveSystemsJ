@@ -39,8 +39,8 @@ public class IntSolutionType extends SolutionType {
 	MySolution S = new MySolution ();
 	public static ArrayList<Rule> rules ; //= new ArrayList<Rule> ();
 	 Input input = new Input ();
-	 public static int min_rules_size = 20 ;
-	 public static int max_rules_size =50;
+	 public static int min_rules_size = 50 ;
+	 public static int max_rules_size =100;
 	 public static int rules_size ;
 	 int h =0;
 
