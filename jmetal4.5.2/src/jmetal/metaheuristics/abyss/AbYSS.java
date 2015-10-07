@@ -248,8 +248,9 @@ public class AbYSS extends Algorithm {
    *        first time; if false, indicates that the reference set has to be
    *        updated with new solutions
    * @throws JMException 
+ * @throws ClassNotFoundException 
    */
-  public void referenceSetUpdate(boolean build) throws JMException{
+  public void referenceSetUpdate(boolean build) throws JMException, ClassNotFoundException{
     if (build) { // Build a new reference set
       // STEP 1. Select the p best individuals of P, where p is refSet1Size_. 
       //         Selection Criterium: Spea2Fitness
@@ -432,8 +433,9 @@ public class AbYSS extends Algorithm {
    * template
    * @return  Number of solutions created by the method
    * @throws JMException 
+ * @throws ClassNotFoundException 
    */
-  public int subSetGeneration() throws JMException{            
+  public int subSetGeneration() throws JMException, ClassNotFoundException{            
     Solution [] parents = new Solution[2];
     Solution [] offSpring;
         

@@ -77,7 +77,6 @@ public class AbYSS_main {
     logger_      = Configuration.logger_ ;
     fileHandler_ = new FileHandler("AbYSS.log"); 
     logger_.addHandler(fileHandler_) ;
-    
     indicators = null ;
     if (args.length == 1) {
       Object [] params = {"Real"};
@@ -132,7 +131,6 @@ public class AbYSS_main {
     // STEP 6. Add the operators to the algorithm
     algorithm.addOperator("crossover",crossover);
     algorithm.addOperator("improvement",improvement);   
-    
     long initTime      ;
     long estimatedTime ;    
     initTime = System.currentTimeMillis();
