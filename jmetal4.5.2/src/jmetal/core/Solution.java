@@ -161,7 +161,7 @@ public class Solution implements Serializable {
 
     //variable_ = problem.solutionType_.createVariables() ; 
     variable_ = type_.createVariables() ;
-    rules_ = IntSolutionType.rules ;
+    rules_ = IntSolutionType.Listrules ;
   } // Solution
   
   static public Solution getNewSolution(Problem problem) throws ClassNotFoundException {
@@ -171,8 +171,9 @@ public class Solution implements Serializable {
   /** 
    * Constructor
    * @param problem The problem to solve
+ * @throws ClassNotFoundException 
    */
-  public Solution(Problem problem, Variable [] variables){
+  public Solution(Problem problem, Variable [] variables) throws ClassNotFoundException{
     problem_ = problem ;
   	type_ = problem.getSolutionType() ;
     numberOfObjectives_ = problem.getNumberOfObjectives() ;
@@ -185,8 +186,8 @@ public class Solution implements Serializable {
     distanceToSolutionSet_ = Double.POSITIVE_INFINITY ;
     //<-
 
-    variable_ = variables ;
-    rules_ = IntSolutionType.rules ;
+    variable_ = type_.createVariables() ;
+    rules_ = IntSolutionType.Listrules ;
   } // Constructor
   
   /** 

@@ -37,7 +37,9 @@ import jmetal.problems.AdaptiveInterface.Rule;
  */
 public class IntSolutionType extends SolutionType {
 	MySolution S = new MySolution ();
-	public static ArrayList<Rule> rules ; //= new ArrayList<Rule> ();
+	public static ArrayList<Rule> rules ; 
+	public static ArrayList<Rule> Listrules ; 
+	//= new ArrayList<Rule> ();
 	 Input input = new Input ();
 	 public static int min_rules_size = 50 ;
 	 public static int max_rules_size =100;
@@ -58,8 +60,9 @@ public class IntSolutionType extends SolutionType {
 	public Variable[] createVariables() {
 		Variable[] variables = new Variable[problem_.getNumberOfVariables()];
 		rules = new ArrayList<Rule> ();
+		Listrules = new ArrayList<Rule> ();
 		Random number_generator = new Random();
-		rules_size = min_rules_size+ (int) (Math.random() * ((max_rules_size - min_rules_size) + 1));
+		//rules_size = min_rules_size+ (int) (Math.random() * ((max_rules_size - min_rules_size) + 1));
 	    rules_size = number_generator.nextInt(max_rules_size);
 		 if (rules_size < min_rules_size) rules_size = min_rules_size;
         System.out.println("\n number of rules to create : "+rules_size);
@@ -69,6 +72,7 @@ public class IntSolutionType extends SolutionType {
 		   for (int var = 0; var <rules_size; var++)
 			{variables[var] = new Int((int)problem_.getLowerLimit(var),(int)problem_.getUpperLimit(var)); 
 			        rules.add(S.create_rule(input));
+			       
 			        //S.create_rule(input);
 			      
 		       /*try {
@@ -78,8 +82,12 @@ public class IntSolutionType extends SolutionType {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}*/}
-		    
+		    for(int i=0;i<rules_size;i++){
+		    	Listrules.add(i, rules.get(i));
+		    	variables[i]= new Int(Listrules.size(), i);
+		    }
 		  
+		    
 
 		return variables ;
 	} // createVariables

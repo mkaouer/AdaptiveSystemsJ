@@ -8,8 +8,8 @@ import jmetal.problems.AdaptiveInterface.MySolution;
 import jmetal.util.JMException;
 
 public class Adapt_Interface extends Problem {
-	 int lower_rules_size= 5;
-	 int upper_rules_size= 10;
+	 int lower_rules_size= 50;
+	 int upper_rules_size= 100;
 	 
 	public Adapt_Interface(String solutionType) throws ClassNotFoundException {
 	    this(solutionType, 1);
@@ -49,7 +49,7 @@ public class Adapt_Interface extends Problem {
 	     
 	    System.out.println(" Size of solution : "+ IntSolutionType.rules_size);
 	     
-	 f[0] = IntSolutionType.rules_size ;//S.fitness_1() ; 
+	 f[0] = IntSolutionType.Listrules.size() ;//S.fitness_1() ; 
      f[1] = S.fitness_2();        
      
     solution.setObjective(0,f[0]);

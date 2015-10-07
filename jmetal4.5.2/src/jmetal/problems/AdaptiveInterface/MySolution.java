@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
+import jmetal.core.Solution;
+import jmetal.core.SolutionSet;
 import jmetal.encodings.solutionType.IntSolutionType;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -154,35 +156,37 @@ public class MySolution {
 		}
 	}*/
 	
-	public void Mymutation(int value , ArrayList<Rule> Rules)
-	 {    
+	public void Mymutation(int value , Rule rule)
+	 {   
 		  Random number_generator = new Random();
-	      int nb = 0;
-	      nb = (int) (Math.random() * 2 ); 
+	      int nb =1;
+	    nb = (int) (Math.random() * 2 ); 
 	     // System.out.println("nombre à choisir : "+nb);
 	      System.out.println("mutation point: "+value);
 	      //System.out.println("size of list : "+IntSolutionType.rules.size());
-	      if (nb==0)
-	      {
+	   if (nb==0)
+	      {System.out.println("#####################"+rule.rule_text);
 	      Rule temp = new Rule();
 	      int source_index1 = number_generator.nextInt(Input.ValuesOfContext().length);
 	      int source_index3 = number_generator.nextInt(Input.Operator().length);
-	      temp.src =  Input.Context()[ind1.get(value)];
-	      temp.src0 = Input.ValuesOfContext()[source_index1];
-	      temp.src2 = Input.Metrics()[ind2.get(value)];
-	      temp.src3 = Input.Operator()[source_index3];
-	      temp.src4 = Input.Val_Metric();
-	      temp.trg =  Input.Problem()[ind3.get(value)];
-	      temp.print_rule();
-	      IntSolutionType.rules.set(value, temp);
+	      int source_index4 = number_generator.nextInt(Input.Val_Metric().length());  
+	     rule.src0 = Input.ValuesOfContext()[source_index1];
+	      rule.src3 = Input.Operator()[source_index3];
+	      rule.src4 = Input.Val_Metric();
+	      IntSolutionType.Listrules.set(value, rule);
+	     // IntSolutionType.rules.set(value,rule);
 	      //Rules[value] = temp ;
 	     // System.out.println("*******"+IntSolutionType.rules.get(value).rule_text);
 	      }
 	      if ( nb==1)
 	    	  
-	      {
+	      {System.out.println("*******************"+rule.rule_text);
+	    	  
 	    	  //IntSolutionType.rules.remove(IntSolutionType.rules.get(value))  ;
-	    	  IntSolutionType.rules.remove(value);
+	      IntSolutionType.Listrules.remove(rule);
+	     // IntSolutionType.rules_size=IntSolutionType.rules_size-1;
+	 //     IntSolutionType.rules_size=IntSolutionType.rules_size-1;
+	    	//  IntSolutionType.rules.set(value, null);
 	    	//System.out.println("size of list after remove : "+IntSolutionType.rules.size());
 	    	/*for(int i= 0; i<rules.size();i++)
 	    	{
@@ -713,14 +717,16 @@ public class MySolution {
 		for(int i = 0 ; i< 5 ;i++)
 		{parent1.add(S.create_rule2(r));}
 		for(int i = 0 ; i< 5 ;i++)
-		{System.out.println("parent 1 : "+parent1.get(i).rule_text);}
+		{System.out.println("parent 1 : "+parent1.get(i).rule_text);
+		//S.Mymutation(value, parent1.get(value));
+		}
 		
 		for(int i = 0 ; i< 5 ;i++)
 		{parent2.add(S.create_rule2(r));}
 		for(int i = 0 ; i< 5 ;i++)
 		{System.out.println("parent 2 : "+parent2.get(i).rule_text);}
 		//S.create_solution(r, value2);
-		//S.Mymutation(value, rules);
+		
 		//S.fitness_1();
 		S.MyCrossover(parent1, parent2, min_rules_size);
 		//S. SolutionSize ( min_rules_size , max_rules_size );

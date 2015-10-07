@@ -112,7 +112,7 @@ public class NSGAII_main {
 
     // Algorithm parameters
     algorithm.setInputParameter("populationSize",100); //100
-    algorithm.setInputParameter("maxEvaluations",100); //25000
+    algorithm.setInputParameter("maxEvaluations",500); //25000
 
     // Mutation and Crossover for Real codification 
     parameters = new HashMap() ;
@@ -123,8 +123,7 @@ public class NSGAII_main {
     parameters = new HashMap() ;
     parameters.put("probability", 1.0/problem.getNumberOfVariables()) ;
     parameters.put("distributionIndex", 20.0) ;
-    mutation = MutationFactory.getMutationOperator("BitFlipMutation"
-    		+ "", parameters);                    
+    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);                    
 
     // Selection Operator 
     parameters = null ;
@@ -146,11 +145,11 @@ public class NSGAII_main {
     // Result messages 
     logger_.info("Total execution time: "+estimatedTime + "ms");
     logger_.info("Variables values have been writen to file VAR");
-    //population.printVariablesToFile("VAR"); 
+ //  population.printVariablesToFile("VAR"); 
     logger_.info("Rules values have been writen to file Rule");
     population.printRulesToFile("Rule");
     logger_.info("Objectives values have been writen to file FUN");
-    population.printObjectivesToFile("FUN");
+    population.printFeasibleFUN("FUN");
     
   
     if (indicators != null) {

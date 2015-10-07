@@ -61,9 +61,9 @@ public class Main {
 
     Settings settings = null;
 
-    String algorithmName   = "" ;
-    String problemName     = "Kursawe" ; // Default problem
-    String paretoFrontFile = "" ;
+    String algorithmName   = "NSGAII" ;
+    String problemName     = "Adapt_Interface" ; // Default problem
+   // String paretoFrontFile = "" ;
 
     indicators = null ;
     problem = null ;
@@ -89,7 +89,7 @@ public class Main {
     else if (args.length == 3) { // algorithmName problemName paretoFrontFile
       algorithmName = args[0] ;
       problemName = args[1] ;
-      paretoFrontFile = args[2] ;
+     // paretoFrontFile = args[2] ;
       Object [] settingsParams = {problemName} ;
       settings = (new SettingsFactory()).getSettingsObject(algorithmName, settingsParams) ;
     } // if
@@ -103,7 +103,7 @@ public class Main {
 
     if (args.length == 3) {
     	Problem p = algorithm.getProblem() ;
-      indicators = new QualityIndicator(p, paretoFrontFile);
+     // indicators = new QualityIndicator(p, paretoFrontFile);
     }
     
     // Execute the Algorithm

@@ -27,6 +27,7 @@ import jmetal.core.SolutionSet;
 import jmetal.operators.crossover.CrossoverFactory;
 import jmetal.operators.localSearch.MutationLocalSearch;
 import jmetal.operators.mutation.MutationFactory;
+import jmetal.problems.Adapt_Interface;
 import jmetal.problems.ProblemFactory;
 import jmetal.problems.ZDT.ZDT4;
 import jmetal.qualityIndicator.QualityIndicator;
@@ -91,7 +92,8 @@ public class AbYSS_main {
       //problem = new Kursawe("Real", 3);
       //problem = new Kursawe("BinaryReal", 3);
       //problem = new Water("Real");
-      problem = new ZDT4("ArrayReal", 10);
+    //  problem = new ZDT4("ArrayReal", 10);
+      problem = new Adapt_Interface("Int");
       //problem = new ConstrEx("Real");
       //problem = new DTLZ1("Real");
       //problem = new OKA2("Real") ;
@@ -101,25 +103,25 @@ public class AbYSS_main {
     algorithm = new AbYSS(problem) ;
     
     // STEP 3. Set the input parameters required by the metaheuristic
-    algorithm.setInputParameter("populationSize", 20);
+    algorithm.setInputParameter("populationSize", 100);
     algorithm.setInputParameter("refSet1Size"   , 10);
     algorithm.setInputParameter("refSet2Size"   , 10);
     algorithm.setInputParameter("archiveSize"   , 100);
-    algorithm.setInputParameter("maxEvaluations", 25000);
+    algorithm.setInputParameter("maxEvaluations", 100);
       
     // STEP 4. Specify and configure the crossover operator, used in the
     //         solution combination method of the scatter search
     parameters = new HashMap() ;
     parameters.put("probability", 0.9) ;
     parameters.put("distributionIndex", 20.0) ;
-    crossover = CrossoverFactory.getCrossoverOperator("SBXCrossover", parameters);                   
+    crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);                   
     
     // STEP 5. Specify and configure the improvement method. We use by default
     //         a polynomial mutation in this method.
     parameters = new HashMap() ;
     parameters.put("probability", 1.0/problem.getNumberOfVariables()) ;
     parameters.put("distributionIndex", 20.0) ;
-    mutation = MutationFactory.getMutationOperator("PolynomialMutation", parameters);
+    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);
     
     parameters = new HashMap() ;
     parameters.put("improvementRounds", 1) ;
@@ -142,9 +144,11 @@ public class AbYSS_main {
     // STEP 8. Print the results
     logger_.info("Total execution time: "+estimatedTime + "ms");
     logger_.info("Variables values have been writen to file VAR");
-    population.printVariablesToFile("VAR");    
+   // population.printVariablesToFile("VAR");  
+    logger_.info("Rules values have been writen to file Rule");
+    population.printRulesToFile("Rule_AbYSS");
     logger_.info("Objectives values have been writen to file FUN");
-    population.printObjectivesToFile("FUN");
+    population.printObjectivesToFile("FUN_AbYSS");
   
     if (indicators != null) {
       logger_.info("Quality indicators") ;

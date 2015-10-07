@@ -114,8 +114,9 @@ public class MutationLocalSearch extends LocalSearch {
    * @param object Object representing a solution
    * @return An object containing the new improved solution
  * @throws JMException 
+ * @throws ClassNotFoundException 
    */
-  public Object execute(Object object) throws JMException {
+  public Object execute(Object object) throws JMException, ClassNotFoundException {
     int i = 0;
     int best = 0;
     evaluations_ = 0;        

@@ -56,8 +56,9 @@ public abstract class Operator implements Serializable {
    *                a parameter, while a mutation operator receives a 
    *                <code>Solution</code>.
    * @return An object reference. The returned value depends on the operator. 
+ * @throws ClassNotFoundException 
    */
-  abstract public Object execute(Object object) throws JMException ;
+  abstract public Object execute(Object object) throws JMException, ClassNotFoundException ;
 
   
   /**

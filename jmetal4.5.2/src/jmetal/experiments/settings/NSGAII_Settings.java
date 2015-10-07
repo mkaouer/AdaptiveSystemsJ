@@ -62,7 +62,7 @@ public class NSGAII_Settings extends Settings {
     }
     // Default experiments.settings
     populationSize_              = 100   ;
-    maxEvaluations_              = 25000 ;
+    maxEvaluations_              = 500 ;
     mutationProbability_         = 1.0/problem_.getNumberOfVariables() ;
     crossoverProbability_        = 0.9   ;
     mutationDistributionIndex_   = 20.0  ;
@@ -96,12 +96,12 @@ public class NSGAII_Settings extends Settings {
     parameters = new HashMap() ;
     parameters.put("probability", crossoverProbability_) ;
     parameters.put("distributionIndex", crossoverDistributionIndex_) ;
-    crossover = CrossoverFactory.getCrossoverOperator("SBXCrossover", parameters);
+    crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);
 
     parameters = new HashMap() ;
     parameters.put("probability", mutationProbability_) ;
     parameters.put("distributionIndex", mutationDistributionIndex_) ;
-    mutation = MutationFactory.getMutationOperator("PolynomialMutation", parameters);
+    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);
 
     // Selection Operator
     parameters = null ;
@@ -145,14 +145,14 @@ public class NSGAII_Settings extends Settings {
     parameters = new HashMap() ;
     parameters.put("probability", crossoverProbability_) ;
     parameters.put("distributionIndex", crossoverDistributionIndex_) ;
-    crossover = CrossoverFactory.getCrossoverOperator("SBXCrossover", parameters);
+    crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);
 
     mutationProbability_ = Double.parseDouble(configuration.getProperty("mutationProbability",String.valueOf(mutationProbability_)));
     mutationDistributionIndex_ = Double.parseDouble(configuration.getProperty("mutationDistributionIndex",String.valueOf(mutationDistributionIndex_)));
     parameters = new HashMap() ;
     parameters.put("probability", mutationProbability_) ;
     parameters.put("distributionIndex", mutationDistributionIndex_) ;
-    mutation = MutationFactory.getMutationOperator("PolynomialMutation", parameters);
+    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);
 
     // Selection Operator
     parameters = null ;

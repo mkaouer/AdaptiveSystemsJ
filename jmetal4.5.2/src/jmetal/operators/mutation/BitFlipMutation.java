@@ -95,16 +95,15 @@ public class BitFlipMutation extends Mutation {
 						//solution.getDecisionVariables()[i].setValue(value);
 						 
 					} // if*/
-				for (int i = 0; i < IntSolutionType.rules.size() ; i++  )//.getDecisionVariables().length; i++)
+				for (int i = 0; i < IntSolutionType.Listrules.size() ; i++  )//.getDecisionVariables().length; i++)
 					if (PseudoRandom.randDouble() < probability) {
-						int value = PseudoRandom.randInt( (int)IntSolutionType.min_rules_size-1,
-								                          (int)IntSolutionType.rules_size-1);
-						
-						 if ((IntSolutionType.rules_size == IntSolutionType.min_rules_size) ||(value >= IntSolutionType.rules_size)) {value = IntSolutionType.min_rules_size-1;}
+						int value = PseudoRandom.randInt( (int) IntSolutionType.min_rules_size,IntSolutionType.Listrules.size());
+ if ((value >= IntSolutionType.Listrules.size())) 
+ {value = IntSolutionType.Listrules.size()-1;
 				//int value =1;
 				MySolution S = new MySolution();
-				S.Mymutation(value, IntSolutionType.rules);}
-				
+				S.Mymutation(value, IntSolutionType.Listrules.get(value));}
+					}
 			} // else
 		} catch (ClassCastException e1) {
 			Configuration.logger_.severe("BitFlipMutation.doMutation: " +

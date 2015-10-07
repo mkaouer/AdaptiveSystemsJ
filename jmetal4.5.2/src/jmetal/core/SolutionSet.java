@@ -294,10 +294,14 @@ public class SolutionSet implements Serializable {
 	      BufferedWriter bw      = new BufferedWriter(osw)        ;            
 
 	      if (size()>0) {
-	        int numberOfVariables = solutionsList_.get(0).getDecisionVariables().length ;
+	       // int numberOfVariables = solutionsList_.get(0).getDecisionVariables().length ;
 	        for (Solution aSolutionsList_ : solutionsList_) {
-	          for (int j = 0; j < IntSolutionType.rules_size-1; j++)
-	            bw.write(IntSolutionType.rules.get(j).rule_text +"\n"  + "  ");
+	        	 bw.write("la solution est:");
+	        	 bw.write(aSolutionsList_.getLocation());
+	        	 bw.newLine();
+	          for (int j = 0; j < IntSolutionType.rules_size-1; j++){
+	        	 
+	            bw.write(IntSolutionType.rules.get(j).rule_text +"\n"  + "  ");}
 	          //System.out.println(" Solution number : "+aSolutionsList_.getRank());
 	          bw.newLine();
 	        }
@@ -374,10 +378,10 @@ public class SolutionSet implements Serializable {
    * @param i The position of the solution to remove.
    */
   public void remove(int i){        
-    if (i > solutionsList_.size()-1) {            
+    if (i > IntSolutionType.Listrules.size()-1) {            
       Configuration.logger_.severe("Size is: "+this.size());
     } // if
-    solutionsList_.remove(i);    
+    IntSolutionType.Listrules.remove(i);    
   } // remove
 
 

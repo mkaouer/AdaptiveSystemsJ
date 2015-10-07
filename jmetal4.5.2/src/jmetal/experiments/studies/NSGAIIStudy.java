@@ -129,7 +129,7 @@ public class NSGAIIStudy extends Experiment {
     rows = 2 ;
     columns = 3 ;
     prefix = new String("Problems");
-    problems = new String[]{"ZDT1", "ZDT2","ZDT3", "ZDT4", "DTLZ1", "WFG2"} ;
+    problems = new String[]{"ZDT1", "ZDT2","ZDT3", "ZDT4", "DTLZ1","Adapt_Interface"} ;
 
     boolean notch ;
     exp.generateRBoxplotScripts(rows, columns, problems, prefix, notch = true, exp) ;

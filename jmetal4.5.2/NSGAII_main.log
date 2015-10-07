@@ -2,19 +2,19 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2015-10-07T00:45:23</date>
-  <millis>1444175123151</millis>
+  <date>2015-10-07T20:28:11</date>
+  <millis>1444246091191</millis>
   <sequence>0</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>jmetal.metaheuristics.nsgaII.NSGAII_main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Total execution time: 1759ms</message>
+  <message>Total execution time: 7593ms</message>
 </record>
 <record>
-  <date>2015-10-07T00:45:23</date>
-  <millis>1444175123155</millis>
+  <date>2015-10-07T20:28:11</date>
+  <millis>1444246091196</millis>
   <sequence>1</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
@@ -24,8 +24,8 @@
   <message>Variables values have been writen to file VAR</message>
 </record>
 <record>
-  <date>2015-10-07T00:45:23</date>
-  <millis>1444175123156</millis>
+  <date>2015-10-07T20:28:11</date>
+  <millis>1444246091196</millis>
   <sequence>2</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Rules values have been writen to file Rule</message>
 </record>
 <record>
-  <date>2015-10-07T00:45:23</date>
-  <millis>1444175123160</millis>
+  <date>2015-10-07T20:28:11</date>
+  <millis>1444246091198</millis>
   <sequence>3</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
