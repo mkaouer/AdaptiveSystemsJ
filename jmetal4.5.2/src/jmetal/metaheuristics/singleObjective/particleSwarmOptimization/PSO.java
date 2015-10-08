@@ -300,8 +300,9 @@ public class PSO extends Algorithm {
   /**
    * Apply a mutation operator to some particles in the swarm
    * @throws JMException 
+ * @throws ClassNotFoundException 
    */
-  private void mopsoMutation(int actualIteration, int totalIterations) throws JMException {
+  private void mopsoMutation(int actualIteration, int totalIterations) throws JMException, ClassNotFoundException {
     for (int i = 0; i < particles_.size(); i++) {
       if ( (i % 6) == 0)
         polynomialMutation_.execute(particles_.get(i)) ;

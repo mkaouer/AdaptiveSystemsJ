@@ -27,6 +27,7 @@ import jmetal.core.Problem;
 import jmetal.core.SolutionSet;
 import jmetal.operators.crossover.CrossoverFactory;
 import jmetal.operators.mutation.MutationFactory;
+import jmetal.problems.Adapt_Interface;
 import jmetal.problems.Kursawe;
 import jmetal.problems.ProblemFactory;
 import jmetal.qualityIndicator.QualityIndicator;
@@ -97,7 +98,8 @@ public class pMOEAD_main {
         dataDirectory = args[2] ;
       } // if
     else { // Problem + number of threads + data directory
-      problem = new Kursawe("Real", 3); 
+     // problem = new Kursawe("Real", 3); 
+    	problem = new Adapt_Interface("Int");
       //problem = new Kursawe("BinaryReal", 3);
       //problem = new Water("Real");
       //problem = new ZDT1("ArrayReal", 100);
@@ -130,7 +132,7 @@ public class pMOEAD_main {
     parameters = new HashMap() ;
     parameters.put("CR", 1.0) ;
     parameters.put("F", 0.5) ;
-    crossover = CrossoverFactory.getCrossoverOperator("DifferentialEvolutionCrossover", parameters);                   
+    crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);                   
     crossover.setParameter("CR", 1.0);                   
     crossover.setParameter("F", 0.5);
     
@@ -138,7 +140,7 @@ public class pMOEAD_main {
     parameters = new HashMap() ;
     parameters.put("probability", 1.0/problem.getNumberOfVariables()) ;
     parameters.put("distributionIndex", 20.0) ;
-    mutation = MutationFactory.getMutationOperator("PolynomialMutation", parameters);  
+    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);  
     
     algorithm.addOperator("crossover",crossover);
     algorithm.addOperator("mutation",mutation);
@@ -151,10 +153,11 @@ public class pMOEAD_main {
     // Result messages 
     logger_.info("Total execution time: "+estimatedTime + " ms");
     logger_.info("Objectives values have been writen to file FUN");
-    population.printObjectivesToFile("FUN");
+    population.printObjectivesToFile("FUN_MOAED");
     logger_.info("Variables values have been writen to file VAR");
-    population.printVariablesToFile("VAR");      
-    
+   // population.printVariablesToFile("VAR");      
+    logger_.info("Rules values have been writen to file Rule");
+    population.printRulesToFile("Rule_MOAED");
     if (indicators != null) {
       logger_.info("Quality indicators") ;
       logger_.info("Hypervolume: " + indicators.getHypervolume(population)) ;

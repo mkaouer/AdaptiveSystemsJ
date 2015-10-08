@@ -243,9 +243,10 @@ public class SolutionSet implements Serializable {
       FileOutputStream fos   = new FileOutputStream(path)     ;
       OutputStreamWriter osw = new OutputStreamWriter(fos)    ;
       BufferedWriter bw      = new BufferedWriter(osw)        ;
-       
+    //  int numberOfVariables = solutionsList_.get(1).numberOfVariables();
       for (Solution aSolutionsList_ : solutionsList_) {
         //if (this.vector[i].getFitness()<1.0) {
+    	//  for (int j = 0; j < numberOfVariables; j++)
         bw.write(aSolutionsList_.toString());
         //System.out.println("rules  : "+aSolutionsList_.rule());
         //System.out.println("decision variable : "+aSolutionsList_.getDecisionVariables());
@@ -297,11 +298,11 @@ public class SolutionSet implements Serializable {
 	       // int numberOfVariables = solutionsList_.get(0).getDecisionVariables().length ;
 	        for (Solution aSolutionsList_ : solutionsList_) {
 	        	 bw.write("la solution est:");
-	        	 bw.write(aSolutionsList_.getLocation());
+	        	// bw.write((int) aSolutionsList_.getObjective(capacity_));
 	        	 bw.newLine();
-	          for (int j = 0; j < IntSolutionType.rules_size-1; j++){
+	          for (int j = 0; j < IntSolutionType.Listrules.size(); j++){
 	        	 
-	            bw.write(IntSolutionType.rules.get(j).rule_text +"\n"  + "  ");}
+	            bw.write(IntSolutionType.Listrules.get(j).rule_text +"\n"  + "  ");}
 	          //System.out.println(" Solution number : "+aSolutionsList_.getRank());
 	          bw.newLine();
 	        }

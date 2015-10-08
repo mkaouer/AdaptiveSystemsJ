@@ -77,7 +77,7 @@ public class NSGAII_main {
     Operator  mutation  ; // Mutation operator
     Operator  selection ; // Selection operator
     
-    HashMap  parameters ; // Operator parameters
+    HashMap<String, Double>  parameters ; // Operator parameters
     
     QualityIndicator indicators ; // Object to get quality indicators
 
@@ -115,12 +115,12 @@ public class NSGAII_main {
     algorithm.setInputParameter("maxEvaluations",500); //25000
 
     // Mutation and Crossover for Real codification 
-    parameters = new HashMap() ;
+    parameters = new HashMap<String, Double>() ;
     parameters.put("probability", 0.9) ;
     parameters.put("distributionIndex", 20.0) ;
     crossover = CrossoverFactory.getCrossoverOperator("SinglePointCrossover", parameters);                   
 
-    parameters = new HashMap() ;
+    parameters = new HashMap<String, Double>() ;
     parameters.put("probability", 1.0/problem.getNumberOfVariables()) ;
     parameters.put("distributionIndex", 20.0) ;
     mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);                    
@@ -147,9 +147,9 @@ public class NSGAII_main {
     logger_.info("Variables values have been writen to file VAR");
  //  population.printVariablesToFile("VAR"); 
     logger_.info("Rules values have been writen to file Rule");
-    population.printRulesToFile("Rule");
+    population.printRulesToFile("Rule_NSGAII");
     logger_.info("Objectives values have been writen to file FUN");
-    population.printFeasibleFUN("FUN");
+    population.printFeasibleFUN("FUN_NSGAII");
     
   
     if (indicators != null) {

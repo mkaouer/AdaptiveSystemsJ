@@ -28,6 +28,7 @@ import jmetal.core.SolutionSet;
 import jmetal.operators.crossover.CrossoverFactory;
 import jmetal.operators.mutation.MutationFactory;
 import jmetal.operators.selection.SelectionFactory;
+import jmetal.problems.Adapt_Interface;
 import jmetal.problems.singleObjective.OneMax;
 import jmetal.util.JMException;
 
@@ -52,8 +53,8 @@ public class GA_main {
     HashMap  parameters ; // Operator parameters
 
     int bits = 512 ;
-    problem = new OneMax("Binary", bits);
- 
+   // problem = new OneMax("Binary", bits);
+    problem = new Adapt_Interface("Int");
     //problem = new Sphere("Real", 10) ;
     //problem = new Easom("Real") ;
     //problem = new Griewank("Real", 10) ;
@@ -65,7 +66,7 @@ public class GA_main {
     
     /* Algorithm parameters*/
     algorithm.setInputParameter("populationSize",100);
-    algorithm.setInputParameter("maxEvaluations", 25000);
+    algorithm.setInputParameter("maxEvaluations", 100);
     /*
     // Mutation and Crossover for Real codification 
     parameters = new HashMap() ;
@@ -105,8 +106,10 @@ public class GA_main {
 
     /* Log messages */
     System.out.println("Objectives values have been writen to file FUN");
-    population.printObjectivesToFile("FUN");
+    population.printObjectivesToFile("FUN_GA");
     System.out.println("Variables values have been writen to file VAR");
-    population.printVariablesToFile("VAR");          
+   // population.printVariablesToFile("VAR"); 
+    System.out.println("Rules values have been writen to file Rule");
+    population.printRulesToFile("Rule_GA");
   } //main
 } // GA_main

@@ -70,7 +70,7 @@ public class IntSolutionType extends SolutionType {
            h++;
 		  System.out.println("********** Solution X************ " +h );
 		   for (int var = 0; var <rules_size; var++)
-			{variables[var] = new Int((int)problem_.getLowerLimit(var),(int)problem_.getUpperLimit(var)); 
+			{//variables[var] = new Int((int)problem_.getLowerLimit(var),(int)problem_.getUpperLimit(var)); 
 			        rules.add(S.create_rule(input));
 			       
 			        //S.create_rule(input);
@@ -84,7 +84,7 @@ public class IntSolutionType extends SolutionType {
 			}*/}
 		    for(int i=0;i<rules_size;i++){
 		    	Listrules.add(i, rules.get(i));
-		    	variables[i]= new Int(Listrules.size(), i);
+		    	//variables[i]= new Int(Listrules.size(), i);
 		    }
 		  
 		    

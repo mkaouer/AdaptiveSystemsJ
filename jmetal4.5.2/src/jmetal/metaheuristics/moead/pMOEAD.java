@@ -212,6 +212,9 @@ public class pMOEAD extends Algorithm implements Runnable {
 
 				} catch (JMException ex) {
 					Logger.getLogger(pMOEAD.class.getName()).log(Level.SEVERE, null, ex);
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 
 				evaluations_++;

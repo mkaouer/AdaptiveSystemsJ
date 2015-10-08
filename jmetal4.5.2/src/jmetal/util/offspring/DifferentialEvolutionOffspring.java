@@ -57,7 +57,7 @@ public class DifferentialEvolutionOffspring extends Offspring {
     id_ = "DE" ;
   }
 
-  public Solution getOffspring(SolutionSet solutionSet, int index) {
+  public Solution getOffspring(SolutionSet solutionSet, int index) throws ClassNotFoundException {
     Solution[] parents = new Solution[3] ;
     Solution offSpring = null ;
 
@@ -98,7 +98,10 @@ public class DifferentialEvolutionOffspring extends Offspring {
       offspring = (Solution) crossover_.execute(new Object[]{currentSolution, parents});
     } catch (JMException ex) {
       Logger.getLogger(DifferentialEvolutionOffspring.class.getName()).log(Level.SEVERE, null, ex);
-    }
+    } catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 
     //Create a new solution, using DE
     return offspring ;

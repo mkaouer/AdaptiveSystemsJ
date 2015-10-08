@@ -26,6 +26,7 @@ import jmetal.core.Operator;
 import jmetal.core.Problem;
 import jmetal.core.SolutionSet;
 import jmetal.operators.selection.SelectionFactory;
+import jmetal.problems.Adapt_Interface;
 import jmetal.problems.Kursawe;
 import jmetal.problems.LZ09.LZ09_F3;
 import jmetal.problems.ProblemFactory;
@@ -104,7 +105,8 @@ public class NSGAIIAdaptive_main {
       indicators = new QualityIndicator(problem, args[1]) ;
     } // if
     else { // Default problem
-      problem = new Kursawe("Real", 3); 
+     // problem = new Kursawe("Real", 3); 
+      problem = new Adapt_Interface("Int");
       //problem = new Kursawe("BinaryReal", 3);
       //problem = new Water("Real");
       //problem = new ZDT1("ArrayReal", 100);
@@ -158,10 +160,11 @@ public class NSGAIIAdaptive_main {
     
     // Result messages 
     logger_.info("Total execution time: "+estimatedTime + "ms");
-    logger_.info("Variables values have been writen to file VAR");
-    population.printVariablesToFile("VAR");    
+      
     logger_.info("Objectives values have been writen to file FUN");
     population.printObjectivesToFile("FUN");
+    logger_.info("Rules values have been writen to file Rule");
+    population.printRulesToFile("Rule_NSGAII");
   
     if (indicators != null) {
       logger_.info("Quality indicators") ;

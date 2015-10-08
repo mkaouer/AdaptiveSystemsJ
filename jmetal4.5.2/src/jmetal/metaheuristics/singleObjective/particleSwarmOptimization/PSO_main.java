@@ -26,6 +26,7 @@ import jmetal.core.Problem;
 import jmetal.core.SolutionSet;
 import jmetal.operators.mutation.Mutation;
 import jmetal.operators.mutation.MutationFactory;
+import jmetal.problems.Adapt_Interface;
 import jmetal.problems.singleObjective.Sphere;
 import jmetal.qualityIndicator.QualityIndicator;
 import jmetal.util.Configuration;
@@ -73,18 +74,18 @@ public class PSO_main {
     //problem = new Easom("Real") ;
     // problem = new Griewank("Real", 10) ;
 
-    problem = new Sphere("Real", 20); 
-
+  //  problem = new Sphere("Real", 20); 
+    problem = new Adapt_Interface("Int");
     algorithm = new PSO(problem) ;
     
     // Algorithm parameters
     algorithm.setInputParameter("swarmSize",50);
-    algorithm.setInputParameter("maxIterations",5000);
+    algorithm.setInputParameter("maxIterations",500);
     
     parameters = new HashMap() ;
     parameters.put("probability", 1.0/problem.getNumberOfVariables()) ;
     parameters.put("distributionIndex", 20.0) ;
-    mutation = MutationFactory.getMutationOperator("PolynomialMutation", parameters);                    
+    mutation = MutationFactory.getMutationOperator("BitFlipMutation", parameters);                    
 
     algorithm.addOperator("mutation", mutation);
 
@@ -96,8 +97,10 @@ public class PSO_main {
     // Result messages 
     logger_.info("Total execution time: "+estimatedTime + "ms");
     logger_.info("Objectives values have been writen to file FUN");
-    population.printObjectivesToFile("FUN");
+    population.printObjectivesToFile("FUN_PSO");
     logger_.info("Variables values have been writen to file VAR");
-    population.printVariablesToFile("VAR");                         
+  //  population.printVariablesToFile("VAR"); 
+    logger_.info("Rules values have been writen to file Rule");
+    population.printRulesToFile("Rule_PSO");
   } //main
 } // PSO_main

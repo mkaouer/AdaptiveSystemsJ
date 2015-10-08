@@ -98,8 +98,9 @@ public class Offspring {
    * @param solutionSet
    * @param solution
    * @return the offspring
+     * @throws ClassNotFoundException 
    */
-  public Solution getOffspring(SolutionSet solutionSet1, int index) {
+  public Solution getOffspring(SolutionSet solutionSet1, int index) throws ClassNotFoundException {
     Logger.getLogger(Offspring.class.getName()).log(Level.SEVERE, "method not implemented") ;
     return null ;
   }
