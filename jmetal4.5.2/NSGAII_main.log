@@ -1,4 +1,48 @@
 <?xml version="1.0" encoding="windows-1252" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
+<record>
+  <date>2015-10-08T22:31:39</date>
+  <millis>1444339899378</millis>
+  <sequence>0</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>jmetal.metaheuristics.nsgaII.NSGAII_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Total execution time: 11402ms</message>
+</record>
+<record>
+  <date>2015-10-08T22:31:39</date>
+  <millis>1444339899560</millis>
+  <sequence>1</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>jmetal.metaheuristics.nsgaII.NSGAII_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Variables values have been writen to file VAR</message>
+</record>
+<record>
+  <date>2015-10-08T22:31:39</date>
+  <millis>1444339899562</millis>
+  <sequence>2</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>jmetal.metaheuristics.nsgaII.NSGAII_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Rules values have been writen to file Rule</message>
+</record>
+<record>
+  <date>2015-10-08T22:31:39</date>
+  <millis>1444339899565</millis>
+  <sequence>3</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>jmetal.metaheuristics.nsgaII.NSGAII_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Objectives values have been writen to file FUN</message>
+</record>
 </log>

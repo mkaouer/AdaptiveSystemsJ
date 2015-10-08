@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-10-08T22:40:37</date>
+  <millis>1444340437964</millis>
+  <sequence>0</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>jmetal.metaheuristics.moead.pMOEAD_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Total execution time: 6246 ms</message>
+</record>
+<record>
+  <date>2015-10-08T22:40:38</date>
+  <millis>1444340438244</millis>
+  <sequence>1</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>jmetal.metaheuristics.moead.pMOEAD_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Objectives values have been writen to file FUN</message>
+</record>
+<record>
+  <date>2015-10-08T22:40:38</date>
+  <millis>1444340438252</millis>
+  <sequence>2</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>jmetal.metaheuristics.moead.pMOEAD_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Variables values have been writen to file VAR</message>
+</record>
+<record>
+  <date>2015-10-08T22:40:38</date>
+  <millis>1444340438253</millis>
+  <sequence>3</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>jmetal.metaheuristics.moead.pMOEAD_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Rules values have been writen to file Rule</message>
+</record>
+</log>
