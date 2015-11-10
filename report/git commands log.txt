@@ -1,0 +1,422 @@
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness
+$ get init
+bash: get: command not found
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness
+$ git init
+Initialized empty Git repository in C:/GDrive/Michigan/0 Papers/students/mabrouk                                                                   a Iness/.git/
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Chapitre 1 Ines.docx
+        Chapitre 3 Ines.docx
+        chapitre 2 Ines.docx
+        chapter1 Mabrouka.docx
+        chapter2 Mabrouka.docx
+        chapter3 Mabrouka.docx
+        chapter4 Iness.docx
+        chapter4 Mabrouka.docx
+        results/
+        ~WRL0004.tmp
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git add -A
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Chapitre 1 Ines.docx
+        new file:   Chapitre 3 Ines.docx
+        new file:   chapitre 2 Ines.docx
+        new file:   chapter1 Mabrouka.docx
+        new file:   chapter2 Mabrouka.docx
+        new file:   chapter3 Mabrouka.docx
+        new file:   chapter4 Iness.docx
+        new file:   chapter4 Mabrouka.docx
+        new file:   results/iness/ines.xlsx
+        new file:   results/iness/ines_question3.xlsx
+        new file:   results/mabrouka/Fitness Values For MOAED.xlsx
+        new file:   results/mabrouka/Graphique.docx
+        new file:   results/mabrouka/INterface Values.xlsx
+        new file:   results/mabrouka/Setting of common parameters.xlsx
+        new file:   results/mabrouka/fitness Values For GA.xlsx
+        new file:   results/mabrouka/quality Int.txt
+        new file:   results/mabrouka/tableau des interfaces.docx
+        new file:   results/quality Int.txt
+        new file:   results/tableau des interfaces.docx
+        new file:   ~WRL0004.tmp
+
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git commmit
+git: 'commmit' is not a git command. See 'git --help'.
+
+Did you mean this?
+        commit
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git commit
+[master (root-commit) 1b6be4f] initial folder setup
+ 20 files changed, 92 insertions(+)
+ create mode 100644 Chapitre 1 Ines.docx
+ create mode 100644 Chapitre 3 Ines.docx
+ create mode 100644 chapitre 2 Ines.docx
+ create mode 100644 chapter1 Mabrouka.docx
+ create mode 100644 chapter2 Mabrouka.docx
+ create mode 100644 chapter3 Mabrouka.docx
+ create mode 100644 chapter4 Iness.docx
+ create mode 100644 chapter4 Mabrouka.docx
+ create mode 100644 results/iness/ines.xlsx
+ create mode 100644 results/iness/ines_question3.xlsx
+ create mode 100644 results/mabrouka/Fitness Values For MOAED.xlsx
+ create mode 100644 results/mabrouka/Graphique.docx
+ create mode 100644 results/mabrouka/INterface Values.xlsx
+ create mode 100644 results/mabrouka/Setting of common parameters.xlsx
+ create mode 100644 results/mabrouka/fitness Values For GA.xlsx
+ create mode 100644 results/mabrouka/quality Int.txt
+ create mode 100644 results/mabrouka/tableau des interfaces.docx
+ create mode 100644 results/quality Int.txt
+ create mode 100644 results/tableau des interfaces.docx
+ create mode 100644 ~WRL0004.tmp
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git log
+commit 1b6be4f42aad4e6694959b2687974742e80cecc6
+Author: Mohamed Wiem Mkaouer <mmkaouer@umich.edu>
+Date:   Mon Nov 9 10:16:39 2015 -0500
+
+    initial folder setup
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git remote
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git remote add AdaptiveSystemsJ https://github.com/mkaouer/AdaptiveSystemsJ.gi                                                                   t
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git remote - v
+error: Unknown subcommand: -
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--m                                                                   irror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)..                                                                   .]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git remote
+AdaptiveSystemsJ
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git remote -v
+AdaptiveSystemsJ        https://github.com/mkaouer/AdaptiveSystemsJ.git (fetch)
+AdaptiveSystemsJ        https://github.com/mkaouer/AdaptiveSystemsJ.git (push)
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git clone https://github.com/mkaouer/AdaptiveSystemsJ.git
+Cloning into 'AdaptiveSystemsJ'...
+remote: Counting objects: 781, done.
+remote: Total 781 (delta 0), reusReceed 0 ivi(delta 0), ng objepack-reuscts: ed                                                                    781
+Receiving objects: 100% (781/781), 3.80 MiB | 7.30 MiB/s, done.
+Resolving deltas: 100% (428/428), done.
+Checking connectivity... done.
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (m                                                                   aster)
+$ git pull AdaptiveSystemsJ
+warning: no common commits
+remote: Counting objects: 781, done.
+remote: Total Receivi781ng objects:  9 6% (750/781)(, 2delta 0), r.26 MiB eused 0 (delta 0), pac| 4k-reused 781
+Receiving objects: 100% (781/781), 3.80 MiB | 4.51 MiB/s, done.
+Resolving deltas: 100% (428/428), done.
+From https://github.com/mkaouer/AdaptiveSystemsJ
+ * [new branch]      master     -> AdaptiveSystemsJ/master
+You asked to pull from the remote 'AdaptiveSystemsJ', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (master)
+$ git commit -a -m 'upload report to repo'
+On branch master
+Untracked files:
+        AdaptiveSystemsJ/
+
+nothing added to commit but untracked files present
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (master)
+$ git add .
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (master)
+$ git commit -a -m 'upload repot to repo'
+[master ab3717a] upload repot to repo
+ 1 file changed, 1 insertion(+)
+ create mode 160000 AdaptiveSystemsJ
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (master)
+$ git push AdaptiveSystemsJ master
+To https://github.com/mkaouer/AdaptiveSystemsJ.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/mkaouer/AdaptiveSystemsJ.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    Chapitre 1 Ines.docx
+        deleted:    Chapitre 3 Ines.docx
+        deleted:    chapitre 2 Ines.docx
+        deleted:    chapter1 Mabrouka.docx
+        deleted:    chapter2 Mabrouka.docx
+        deleted:    chapter3 Mabrouka.docx
+        deleted:    chapter4 Iness.docx
+        deleted:    chapter4 Mabrouka.docx
+        deleted:    results/iness/ines.xlsx
+        deleted:    results/iness/ines_question3.xlsx
+        deleted:    results/mabrouka/Fitness Values For MOAED.xlsx
+        deleted:    results/mabrouka/Graphique.docx
+        deleted:    results/mabrouka/INterface Values.xlsx
+        deleted:    results/mabrouka/Setting of common parameters.xlsx
+        deleted:    results/mabrouka/fitness Values For GA.xlsx
+        deleted:    results/mabrouka/quality Int.txt
+        deleted:    results/mabrouka/tableau des interfaces.docx
+        deleted:    results/quality Int.txt
+        deleted:    results/tableau des interfaces.docx
+        deleted:    ~WRL0004.tmp
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        report/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (master)
+$ git add .
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness (master)
+$ git commit -a -m 're-order folders'
+[master 11c611b] re-order folders
+ 20 files changed, 0 insertions(+), 0 deletions(-)
+ rename Chapitre 1 Ines.docx => report/Chapitre 1 Ines.docx (100%)
+ rename Chapitre 3 Ines.docx => report/Chapitre 3 Ines.docx (100%)
+ rename chapitre 2 Ines.docx => report/chapitre 2 Ines.docx (100%)
+ rename chapter1 Mabrouka.docx => report/chapter1 Mabrouka.docx (100%)
+ rename chapter2 Mabrouka.docx => report/chapter2 Mabrouka.docx (100%)
+ rename chapter3 Mabrouka.docx => report/chapter3 Mabrouka.docx (100%)
+ rename chapter4 Iness.docx => report/chapter4 Iness.docx (100%)
+ rename chapter4 Mabrouka.docx => report/chapter4 Mabrouka.docx (100%)
+ rename {results => report/results}/iness/ines.xlsx (100%)
+ rename {results => report/results}/iness/ines_question3.xlsx (100%)
+ rename {results => report/results}/mabrouka/Fitness Values For MOAED.xlsx (100%)
+ rename {results => report/results}/mabrouka/Graphique.docx (100%)
+ rename {results => report/results}/mabrouka/INterface Values.xlsx (100%)
+ rename {results => report/results}/mabrouka/Setting of common parameters.xlsx (100%)
+ rename {results => report/results}/mabrouka/fitness Values For GA.xlsx (100%)
+ rename {results => report/results/mabrouka}/quality Int.txt (100%)
+ rename {results => report/results/mabrouka}/tableau des interfaces.docx (100%)
+ rename {results/mabrouka => report/results}/quality Int.txt (100%)
+ rename {results/mabrouka => report/results}/tableau des interfaces.docx (100%)
+ delete mode 100644 ~WRL0004.tmp
+
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/Ad                                                                   aptiveSystemsJ (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git pull
+Already up-to-date.
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        report/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git add .
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git commit -a -m 'adding report folder'
+[master e787ab9] adding report folder
+ 19 files changed, 92 insertions(+)
+ create mode 100644 report/Chapitre 1 Ines.docx
+ create mode 100644 report/Chapitre 3 Ines.docx
+ create mode 100644 report/chapitre 2 Ines.docx
+ create mode 100644 report/chapter1 Mabrouka.docx
+ create mode 100644 report/chapter2 Mabrouka.docx
+ create mode 100644 report/chapter3 Mabrouka.docx
+ create mode 100644 report/chapter4 Iness.docx
+ create mode 100644 report/chapter4 Mabrouka.docx
+ create mode 100644 report/results/iness/ines.xlsx
+ create mode 100644 report/results/iness/ines_question3.xlsx
+ create mode 100644 report/results/mabrouka/Fitness Values For MOAED.xlsx
+ create mode 100644 report/results/mabrouka/Graphique.docx
+ create mode 100644 report/results/mabrouka/INterface Values.xlsx
+ create mode 100644 report/results/mabrouka/Setting of common parameters.xlsx
+ create mode 100644 report/results/mabrouka/fitness Values For GA.xlsx
+ create mode 100644 report/results/mabrouka/quality Int.txt
+ create mode 100644 report/results/mabrouka/tableau des interfaces.docx
+ create mode 100644 report/results/quality Int.txt
+ create mode 100644 report/results/tableau des interfaces.docx
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git remote -v
+3origin https://github.com/mkaouer/AdaptiveSystemsJ.git (fetch)
+origin  https://github.com/mkaouer/AdaptiveSystemsJ.git (push)
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git push origin master
+Counting objects: 23, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (23/23), 3.32 MiB | 1.36 MiB/s, done.
+Total 23 (delta 6), reused 0 (delta 0)
+To https://github.com/mkaouer/AdaptiveSystemsJ.git
+   c87083b..e787ab9  master -> master
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        report/Learn Git in 20 Minutes - YouTube.mp4
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git add .
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git commit -a -m 'adding video'
+[master acf0352] adding video
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 report/Learn Git in 20 Minutes - YouTube.mp4
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 10.66 MiB | 1.55 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To https://github.com/mkaouer/AdaptiveSystemsJ.git
+   e787ab9..acf0352  master -> master
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   report/Learn Git in 20 Minutes - YouTube.mp4
+        modified:   report/chapter4 Iness.docx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git pull
+Already up-to-date.
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git add .
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   report/Learn Git in 20 Minutes - YouTube.mp4
+        modified:   report/chapter4 Iness.docx
+
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git commit -a -m 'adding chapter 4 template for Ines'
+[master fc6f999] adding chapter 4 template for Ines
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git push origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/mkaouer/AdaptiveSystemsJ.git/'
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git push origin master
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/mkaouer/AdaptiveSystemsJ.git/'
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 28.54 MiB | 1.80 MiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+To https://github.com/mkaouer/AdaptiveSystemsJ.git
+   acf0352..fc6f999  master -> master
+
+MohamedWiem@MWMPC MINGW64 /c/GDrive/Michigan/0 Papers/students/mabrouka Iness/AdaptiveSystemsJ (master)
+$
+
+
