@@ -24,7 +24,7 @@ Untracked files:
         chapter3 Mabrouka.docx
         chapter4 Iness.docx
         chapter4 Mabrouka.docx
-        results/
+        results/git init
         ~WRL0004.tmp
 
 nothing added to commit but untracked files present (use "git add" to track)
